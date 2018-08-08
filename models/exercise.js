@@ -1,0 +1,27 @@
+// model Exercise
+
+const mongoose=require('mongoose');
+const Schema=mongoose.Schema;
+
+const exerciseSchema=Schema({
+  userId:{
+    type:Schema.Types.ObjectId,
+    required:true
+  },
+  description:{
+    type:String,
+    required:true
+  },
+  duration:{
+    type:Number,
+    required:true
+  },
+  date:{
+    type:Date,
+    required:true
+  }
+})
+
+const Exercise=mongoose.model('Exercice',exerciseSchema);
+
+module.exports=Exercise;
